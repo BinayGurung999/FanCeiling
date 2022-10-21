@@ -46,7 +46,7 @@ public class FanCheck {
 			fancheck.SpeedUp_Test(speed,direction);
 			return true;
 		}
-		else
+		else if(cord == 2)
 		{
 			if(direction== Direction.BACKWARD.toString())
 			{
@@ -57,6 +57,12 @@ public class FanCheck {
 				direction=Direction.BACKWARD.toString();
 			}
 			displayinfo(speed,direction);
+			checkcord(speed,direction);
+			return false;
+		}
+		else
+		{
+			System.out.println("You pressed the wrong number !! Press 1 for Left Cord or Press 2 for Right Cord!!");
 			checkcord(speed,direction);
 			return false;
 		}
